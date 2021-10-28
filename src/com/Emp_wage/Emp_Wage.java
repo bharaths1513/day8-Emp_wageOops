@@ -41,7 +41,28 @@ class empwage
 			System.out.println("Daily emp wage is "+daily_wage);
 		}
 	}
-	
+
+	void Switch_case()		//employee wage by using switch case
+	{
+		switch(random)
+		{
+		case 0:
+			daily_wage = fulltime*rateperhr;
+			System.out.println("Employee is present for Full time");
+			System.out.println("Daily emp wage is "+daily_wage);
+			break;
+		case 1:
+			daily_wage = parttime*rateperhr;
+			System.out.println("Employee is present for Part time");
+			System.out.println("Daily employee wage is "+daily_wage);
+			break;
+		case 2:
+			daily_wage =0;
+			System.out.println("Daily emp wage is "+daily_wage);
+
+		}
+	}
+
 
 
 
@@ -52,7 +73,7 @@ public class Emp_Wage {
 		System.out.println("Welocome to Employee Wage compution Program");
 		empwage o=new empwage();
 		o.empattandance();
-		o.Daily_emp_wage();
+		o.Switch_case();
 
 	}
 }
