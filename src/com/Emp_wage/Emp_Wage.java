@@ -1,5 +1,6 @@
 package com.Emp_wage;
 
+import java.util.Scanner;
 
 class empwage
 {
@@ -127,7 +128,7 @@ class empwage
 				System.out.println("Total number day the employee worked "+totalworkingdays);
 				totalworkingdays++;
 			}
-			
+
 		}
 	}
 }
@@ -135,9 +136,36 @@ class empwage
 public class Emp_Wage {
 	public static void main(String[] args) {
 		System.out.println("Welocome to Employee Wage compution Program");
+		System.out.println("Enter number between (1-5) to get output");
+		System.out.println("1: Employee attendance");
+		System.out.println("2: Daily employee wage");
+		System.out.println("3: Daily employee wage using switch case");
+		System.out.println("4: Employee wage per month");
+		System.out.println("5: Employee wage per month with maximum 100 hrs");
 		empwage o=new empwage();
-		o.empattandance();
-		o.emp_wage_for_100hr();
+		Scanner n=new Scanner(System.in);
+		int choice = n.nextInt();
+		switch(choice)
+		{
+		case 1:
+			o.empattandance();
+			break;
+		case 2:
+			o.Daily_emp_wage();
+			break;
+		case 3:
+			o.Switch_case();
+			break;
+		case 4:
+			o.emp_wage_for_month();
+			break;
+		case 5:
+			o.emp_wage_for_100hr();
+			break;
+			
+		
+		}
+
 
 	}
 }
