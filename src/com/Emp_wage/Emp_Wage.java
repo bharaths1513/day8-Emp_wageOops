@@ -3,19 +3,21 @@ package com.Emp_wage;
 
 class empwage
 {
-	static int fulltime =8;
-	static int rateperhr =20;
-	static int random = (int)(Math.random()*10)%2;
+	static int fulltime = 8;
+	static int parttime = 4;
+	static int rateperhr = 20;
+	static int random = (int)(Math.random()*10)%3;
+	static int daily_wage;
 	void empattandance() 	//creating method for emp attendance
 	{
 
-		if(random == 0)
+		if(random == 2)
 		{
-			System.out.println("Employee is present");
+			System.out.println("Employee is absent");
 		}
 		else
 		{
-			System.out.println("Employee is absent");
+			System.out.println("Employee is present");
 		}
 	}
 
@@ -23,15 +25,23 @@ class empwage
 	{
 		if(random == 0)
 		{
-			int daily_wage = fulltime*rateperhr;
+			daily_wage = fulltime*rateperhr;
+			System.out.println("Employee is present for Full time");
 			System.out.println("Daily emp wage is "+daily_wage);
+		}
+		else if(random ==1)		//calculating employee wage for part time
+		{
+			daily_wage = parttime*rateperhr;
+			System.out.println("Employee is present for Part time");
+			System.out.println("Daily employee wage is "+daily_wage);
 		}
 		else
 		{
-			int daily_wage =0;
+			daily_wage =0;
 			System.out.println("Daily emp wage is "+daily_wage);
 		}
 	}
+	
 
 
 
